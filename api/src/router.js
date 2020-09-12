@@ -40,7 +40,7 @@ router.post("/upload", upload.single("photo"), async (request, response) => {
   }
   try {
     await imageProcessor(request.file.filename);
-  } catch (error) {}
+  } catch {}
 });
 
 router.get("/photo-viewer", (req, res) => {
